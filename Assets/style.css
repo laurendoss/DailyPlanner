@@ -25,7 +25,9 @@ textarea{
 }
 
 .input-group{
-  height: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: -10;
 
   
 
@@ -48,11 +50,11 @@ textarea{
   border-radius: 15px;
 }
 
-.row {
+/* .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;;
-}
+} */
 
 .hour {
   background-color: #ffffff;
@@ -87,3 +89,9 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+.input-group-prepend {
+  position: relative;
+  z-index: 10;
+}
+
