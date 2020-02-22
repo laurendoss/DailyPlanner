@@ -1,14 +1,14 @@
 
 //naming of my global variables
-var dailyInput9 = document.getElementById("input9"); 
-var dailyInput10 = document.getElementById("input10"); 
-var dailyInput11 = document.getElementById("input11"); 
-var dailyInput12 = document.getElementById("input12"); 
-var dailyInput13 = document.getElementById("input13"); 
-var dailyInput14 = document.getElementById("input14"); 
-var dailyInput15 = document.getElementById("input15"); 
-var dailyInput16 = document.getElementById("input16"); 
-var dailyInput17 = document.getElementById("input17"); 
+var dailyInput9 = document.getElementById("9"); 
+var dailyInput10 = document.getElementById("10"); 
+var dailyInput11 = document.getElementById("11"); 
+var dailyInput12 = document.getElementById("12"); 
+var dailyInput13 = document.getElementById("13"); 
+var dailyInput14 = document.getElementById("14"); 
+var dailyInput15 = document.getElementById("15"); 
+var dailyInput16 = document.getElementById("16"); 
+var dailyInput17 = document.getElementById("17"); 
 
 var dailyBtn9 = document.getElementById("inputBtn9"); 
 var dailyBtn10 = document.getElementById("inputBtn10"); 
@@ -103,12 +103,15 @@ dailyBtn17.onclick = function(){
 const rows = document.getElementsByClassName("row");
 let currentHour = parseInt(moment().format('H'));
 
+
+
 Array.from(rows).forEach(row => {
   let
     rowIdString = row.id,
     rowHour;
   if (rowIdString) {
     rowHour = parseInt(rowIdString);
+    
   }
   if (rowHour) {
     // Compares row id to current hour and sets color accordingly
@@ -124,9 +127,9 @@ Array.from(rows).forEach(row => {
   }
 });
 
-function setColor(element, color) {
-  element.style.backgroundColor = color;
-}
+// function setColor(element, color) {
+//   element.style.backgroundColor = color;
+// }
 
 // function determineColors(){
 //     let input =document.getElementById("input9")
@@ -145,17 +148,5 @@ function setColor(element, color) {
 //         $(input).css("background-color", "grey")
 //     }
 // }
-// for (let i = 0; i <localStorage.length; i++) {
-//     const dailyTask9 = localStorage.dailyTask9[i]; 
-//     const value = JSON.parse(localStorage.getItem(dailyTask9)); 
-//     dailyInput9.innerHTML += `${dailyTask9}: ${value}`; 
-// }
 
 
-// $("#inputBtn9").on("click", function(event) {
-//     event.preventDefault();
-//     var dailyTask9 = document.getElementsByClassName("input9").value
-
-//     localStorage.setItem("dailyTask9", dailyTask9); 
-    
-// })
